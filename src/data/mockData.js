@@ -1,6 +1,6 @@
 import { tokens } from "../theme";
 
-export const mockData = [
+export const mockDataTeam = [
   {
     id: 1,
     name: "Jon Snow",
@@ -93,9 +93,9 @@ export const mockDataContacts = [
     email: "cerseilannister@gmail.com",
     age: 42,
     phone: "(421)314-2288",
-    address: "1234 Main Street, New York, NY 10001",
-    city: "New York",
-    zipCode: "13151",
+    address: "1234 Farringdon Road",
+    city: "London",
+    zipCode: "EC1",
     registrarId: 123512,
   },
   {
@@ -103,9 +103,9 @@ export const mockDataContacts = [
     name: "Jaime Lannister",
     email: "jaimelannister@gmail.com",
     age: 45,
-    phone: "(422)982-6739",
-    address: "3333 Want Blvd, Estanza, NAY 42125",
-    city: "New York",
+    phone: "0161 982 6739",
+    address: "125 Deansgate",
+    city: "Manchester",
     zipCode: "87281",
     registrarId: 4132513,
   },
@@ -114,10 +114,10 @@ export const mockDataContacts = [
     name: "Anya Stark",
     email: "anyastark@gmail.com",
     age: 16,
-    phone: "(921)425-6742",
-    address: "1514 Main Street, New York, NY 22298",
-    city: "New York",
-    zipCode: "15551",
+    phone: "0191 425 6742",
+    address: "150 Jesmond Road",
+    city: "Newcastle",
+    zipCode: "NE2",
     registrarId: 123512,
   },
   {
@@ -138,7 +138,7 @@ export const mockDataContacts = [
     age: 150,
     phone: "(232)545-6483",
     address: "1234 Canvile Street, Esvazark, NY 10001",
-    city: "Esvazark",
+    city: "York",
     zipCode: "10001",
     registrarId: 123512,
   },

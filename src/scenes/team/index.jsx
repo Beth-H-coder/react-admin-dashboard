@@ -1,18 +1,18 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockData } from "../../data/mockData";
+import { mockDataTeam } from "../../data/mockData";
 import AdminPanelSettingsOutlinedIcon from "@mui/icons-material/AdminPanelSettingsOutlined";
 import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 import Header from "../../components/Header";
 
 const Team = () => {
-  const theme = useTheme;
+  const theme = useTheme();
   const colours = tokens(theme.palette.mode);
 
   const columns = [
-    { field: "id", headerName: ID },
+    { field: "id", headerName: "ID" },
     {
       field: "name",
       headerName: "Name",
@@ -51,8 +51,6 @@ const Team = () => {
             backgroundColor={
               access === "admin"
                 ? colours.greenAccent[600]
-                : access === "manager"
-                ? colours.greenAccent[700]
                 : colours.greenAccent[700]
             }
             borderRadius="4px"
@@ -89,6 +87,9 @@ const Team = () => {
             backgroundColor: colours.blueAccent[700],
             borderBottom: "none",
           },
+          "& .MuiDataGrid-topContainer": {
+            backgroundColor: `${colours.blueAccent[700]} !important`,
+          },
           "& .MuiDataGrid-virtualScroller": {
             backgroundColor: colours.primary[400],
           },
@@ -101,7 +102,7 @@ const Team = () => {
           },
         }}
       >
-        <DataGrid checkboxSelection rows={mockData} columns={columns} />
+        <DataGrid checkboxSelection rows={mockDataTeam} columns={columns} />
       </Box>
     </Box>
   );
