@@ -87,7 +87,10 @@ const Team = () => {
             backgroundColor: colours.blueAccent[700],
             borderBottom: "none",
           },
-          "& .MuiDataGrid-topContainer": {
+          // "& .MuiDataGrid-topContainer": {
+          //   backgroundColor: `${colours.blueAccent[700]} !important`,
+          // },
+          "& .MuiDataGrid-row--borderBottom": {
             backgroundColor: `${colours.blueAccent[700]} !important`,
           },
           "& .MuiDataGrid-virtualScroller": {
