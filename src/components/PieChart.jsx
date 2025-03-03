@@ -5,7 +5,7 @@ import { mockPieData as data } from "../data/mockData";
 
 const PieChart = () => {
   const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+  const colours = tokens(theme.palette.mode);
   return (
     <ResponsivePie
       data={data}
@@ -13,27 +13,27 @@ const PieChart = () => {
         axis: {
           domain: {
             line: {
-              stroke: colors.grey[100],
+              stroke: colours.grey[100],
             },
           },
           legend: {
             text: {
-              fill: colors.grey[100],
+              fill: colours.grey[100],
             },
           },
           ticks: {
             line: {
-              stroke: colors.grey[100],
+              stroke: colours.grey[100],
               strokeWidth: 1,
             },
             text: {
-              fill: colors.grey[100],
+              fill: colours.grey[100],
             },
           },
         },
         legends: {
           text: {
-            fill: colors.grey[100],
+            fill: colours.grey[100],
           },
         },
       }}
@@ -47,7 +47,7 @@ const PieChart = () => {
         modifiers: [["darker", 0.2]],
       }}
       arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor={colors.grey[100]}
+      arcLinkLabelsTextColor={colours.grey[100]}
       arcLinkLabelsThickness={2}
       arcLinkLabelsColor={{ from: "color" }}
       enableArcLabels={false}
