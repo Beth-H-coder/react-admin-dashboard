@@ -1,6 +1,6 @@
 # 🚀 React Admin Dashboard
 
-Find the deployed version here:
+Find the deployed version here: https://enterprise-admin-dashboard.netlify.app/
 
 A full-featured **React Admin Dashboard** built using enterprise-level technologies. This project explores **industry-standard** packages used in professional development.
 
