@@ -2,7 +2,7 @@ import { Box, Button, IconButton, useTheme, Typography } from "@mui/material";
 import { tokens } from "../../theme";
 import Header from "../../components/Header";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
-import { mockTransactions as data } from "../../data/mockData";
+import { mockTransactions } from "../../data/mockData";
 import EmailIcon from "@mui/icons-material/Email";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
@@ -149,7 +149,7 @@ const Dashboard = () => {
               </Typography>
               <Typography
                 variant="h3"
-                fontWeight="500"
+                fontWeight="bold"
                 color={colours.greenAccent[500]}
               >
                 £56,809.210
@@ -163,9 +163,60 @@ const Dashboard = () => {
               </IconButton>
             </Box>
           </Box>
-          <Box height="250px" ml="-20px">
+          <Box height="250px" mt="-20px">
             <LineChart isDashboard={true} />
           </Box>
+        </Box>
+        {/* -- TRANSACTIONS --  */}
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colours.primary[400]}
+          overflow="auto"
+        >
+          <Box
+            display="flex"
+            justifyContent="space between"
+            alignItems="center"
+            borderBottom={`4px solid ${colours.primary[500]} `}
+            colors={colours.grey[100]}
+            p="15px"
+          >
+            <Typography variant="h5" fontWeight="600" color={colours.grey[100]}>
+              Recent Transactions
+            </Typography>
+          </Box>
+          {mockTransactions.map((transaction, i) => (
+            <Box
+              key={`${transaction.txId}-${i}`}
+              display="flex"
+              justifyContent="space-between"
+              alignItems="center"
+              borderBottom={`4px solid ${colours.primary[500]}`}
+              p="15px"
+            >
+              <Box>
+                <Typography
+                  variant="h5"
+                  fontWeight="600"
+                  color={colours.greenAccent[500]}
+                >
+                  {transaction.txId}
+                </Typography>
+                <Typography color={colours.grey[100]}>
+                  {transaction.user}
+                </Typography>
+              </Box>
+              <Box color={colours.grey[100]}>{transaction.date}</Box>
+              <Box
+                backgroundColor={colours.greenAccent[500]}
+                p="5px 10px"
+                borderRadius="5px"
+              >
+                {transaction.cost}
+              </Box>
+            </Box>
+          ))}
         </Box>
       </Box>
     </Box>
